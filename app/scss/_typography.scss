@@ -1,0 +1,5 @@
+@use './1-abstrauct/fonts' as fo;
+
+body {
+    font-family: fo.$font-baijamjuree;
+}
