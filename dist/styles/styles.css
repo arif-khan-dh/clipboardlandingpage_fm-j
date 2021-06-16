@@ -1,6 +1,71 @@
 @import url(https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap);
+.logo {
+  width: 7.5rem;
+  cursor: pointer;
+}
+.logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  height: 2.875rem;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+}
+button:first-child {
+  background-color: #26baa4;
+  box-shadow: 0px 0px 10px 0px rgba(38, 186, 164, 0.6);
+}
+button:last-child {
+  margin-top: 1.375rem;
+  background-color: #6173ff;
+  box-shadow: 0px 0px 10px 0px rgba(97, 115, 255, 0.6);
+}
+
 body {
   font-family: "Bai Jamjuree";
+}
+
+.container {
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1, h2, h3, a {
+  color: #4c545d;
+}
+
+p {
+  color: #9fabb2;
+  font-size: 1rem;
+  line-height: 1.6em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+button {
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {
@@ -12,10 +77,169 @@ html {
   box-sizing: inherit;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+:root {
+  --mb-container-width: 84.5%;
+}
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(../../images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container {
+  width: var(--mb-container-width);
+  min-width: 19.875rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  margin-left: -900rem;
+  margin-right: -900rem;
+  padding-left: 900rem;
+  padding-right: 900rem;
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: 32%;
+}
+header .text {
+  padding-top: 4.1875rem;
+}
+header .text p {
+  --p-padding-top: 1.375rem;
+  padding-top: var(--p-padding-top);
+  padding-bottom: calc(2 * var(--p-padding-top));
+}
+header .cta {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.what-you-can-do p {
+  padding-top: 1.125rem;
+}
+.what-you-can-do .benefit {
+  padding-top: 3.5rem;
+}
+.what-you-can-do .illustration {
+  padding-top: 3.75rem;
+}
+
+.primary {
+  padding-top: 8.25rem;
+}
+
+.secondary {
+  padding-top: 11.125rem;
+}
+.secondary div:last-child {
+  padding-top: 5.125rem;
+}
+
+.features {
+  padding-top: 5.125rem;
+}
+.features .feature:not(:first-child) {
+  padding-top: 3.5rem;
+}
+.features .feature .icon {
+  width: 2.875rem;
+  margin: 0 auto;
+}
+.features .feature h3 {
+  padding-top: 2.5625rem;
+}
+.features .feature p {
+  padding-top: 1.375rem;
+}
+
+.clients {
+  padding-top: 7.6875rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.clients .client {
+  width: 45%;
+  height: 2.8125rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.clients .client:nth-child(1) {
+  background-image: url(../../../images/logo-google.png);
+}
+.clients .client:nth-child(2) {
+  background-image: url(../../../images/logo-ibm.png);
+}
+.clients .client:nth-child(3) {
+  background-image: url(../../../images/logo-microsoft.png);
+}
+.clients .client:nth-child(4) {
+  background-image: url(../../../images/logo-hp.png);
+  height: 3.4375rem;
+}
+.clients .client:nth-child(5) {
+  background-image: url(../../../images/logo-vector-graphics.png);
+}
+.clients .client:not(:first-child) {
+  margin-top: 3.75rem;
+}
+
+.download {
+  padding-top: 10rem;
+}
+.download .text p {
+  padding-top: 1.375rem;
+}
+.download .cta {
+  padding-top: 2.8125rem;
+}
+
+footer {
+  margin-top: 10.0625rem;
+  padding-top: 3rem;
+  background-color: #f6f7f9;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+footer .logo {
+  width: 3.75rem;
+}
+footer .links {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 2.8125rem;
+}
+footer .links .link:not(:first-child) {
+  margin-top: 2.0625rem;
+}
+footer .socials {
+  padding-top: 3rem;
+  padding-bottom: 2.3125rem;
+  width: 9.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

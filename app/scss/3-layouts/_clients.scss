@@ -1,0 +1,41 @@
+@use '../1-abstrauct/functions' as fu;
+
+.clients {
+    padding-top: fu.toRem(123px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .client {
+        width: 45%;
+        height: fu.toRem(45px);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &:nth-child(1) {
+            background-image: url(../../../images/logo-google.png);
+        }
+
+        &:nth-child(2) {
+            background-image: url(../../../images/logo-ibm.png);
+        }
+
+        &:nth-child(3) {
+            background-image: url(../../../images/logo-microsoft.png);
+        }
+
+        &:nth-child(4) {
+            background-image: url(../../../images/logo-hp.png);
+            height: fu.toRem(55px);
+        }
+
+        &:nth-child(5) {
+            background-image: url(../../../images/logo-vector-graphics.png);
+        }
+
+        &:not(:first-child) {
+            margin-top: fu.toRem(60px);
+        }
+    }
+}

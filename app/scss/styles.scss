@@ -1,3 +1,14 @@
+@use './2-components/logo';
+@use './2-components/button';
+
 @use './typography';
 
 @use './home';
+@use './3-layouts/header';
+@use './3-layouts/what-you-can-do';
+// @use './3-layouts/primary';
+// @use './3-layouts/secondary';
+@use './3-layouts/features';
+@use './3-layouts/clients';
+@use './3-layouts/download';
+@use './3-layouts/footer';

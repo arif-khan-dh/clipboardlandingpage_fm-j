@@ -1,0 +1,11 @@
+@use '../1-abstrauct/functions' as fu;
+
+.logo {
+    width: fu.toRem(120px); // arbitrary value
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}

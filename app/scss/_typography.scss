@@ -1,5 +1,45 @@
 @use './1-abstrauct/fonts' as fo;
+@use './1-abstrauct/colors' as c;
 
 body {
     font-family: fo.$font-baijamjuree;
+}
+
+.container {
+    text-align: center;
+    font-size: fo.$size-sm;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+h1, h2, h3, a {
+    color: c.$darkgrayishBlue;
+}
+
+p {
+    color: c.$grayishBlue;
+    font-size: fo.$size-xsm;
+    line-height: 1.6em;
+}
+
+h1 {
+    font-size: fo.$size-xxlg;
+}
+
+h2 {
+    font-size: fo.$size-xlg;
+}
+
+h3 {
+    font-size: fo.$size-lg;
+}
+
+button {
+    color: white;
+}
+
+a {
+    text-decoration: none;
 }

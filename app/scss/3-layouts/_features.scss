@@ -1,0 +1,25 @@
+@use '../1-abstrauct/functions' as fu;
+
+.features {
+    padding-top: fu.toRem(82px);
+
+    .feature {
+
+        &:not(:first-child) {
+            padding-top: fu.toRem(56px);
+        }
+
+        .icon {
+            width: fu.toRem(46px);
+            margin: 0 auto;
+        }
+
+        h3 {
+            padding-top: fu.toRem(41px);
+        }
+
+        p {
+            padding-top: fu.toRem(22px);
+        }
+    }
+}

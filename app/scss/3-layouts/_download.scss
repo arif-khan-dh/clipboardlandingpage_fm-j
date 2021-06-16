@@ -1,0 +1,16 @@
+@use '../1-abstrauct/functions' as fu;
+
+.download {
+    padding-top: fu.toRem(160px);
+
+    .text {
+
+        p {
+            padding-top: fu.toRem(22px);
+        }
+    }
+
+    .cta {
+        padding-top: fu.toRem(45px);
+    }
+}

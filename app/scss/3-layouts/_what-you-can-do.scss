@@ -1,0 +1,28 @@
+@use '../1-abstrauct/functions' as fu;
+
+.what-you-can-do {
+
+    p {
+        padding-top: fu.toRem(18px);
+    }
+
+    .benefit {
+        padding-top: fu.toRem(56px);
+    }
+
+    .illustration {
+        padding-top: fu.toRem(60px);
+    }
+}
+
+.primary {
+    padding-top: fu.toRem(132px);
+}
+
+.secondary {
+    padding-top: fu.toRem(178px);
+
+    div:last-child {
+        padding-top: fu.toRem(82px);
+    }
+}

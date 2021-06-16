@@ -1,0 +1,25 @@
+@use '../1-abstrauct/functions' as fu;
+
+header {
+    // height: fu.toRem(672px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 32%;    
+
+    .text {
+        padding-top: fu.toRem(67px);
+
+        p {
+            --p-padding-top: #{fu.toRem(22px)};
+            padding-top: var(--p-padding-top);
+            padding-bottom: calc(2 * var(--p-padding-top));
+        }
+    }
+
+    .cta {
+        width: 100%;
+        display: flex;
+        flex-flow:column nowrap;
+    }
+}

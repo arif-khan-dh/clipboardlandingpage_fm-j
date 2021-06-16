@@ -1,0 +1,38 @@
+@use '../1-abstrauct/functions' as fu;
+@use '../1-abstrauct/colors' as c;
+
+footer {
+    margin-top: fu.toRem(161px);
+    padding-top: fu.toRem(48px);
+    background-color: c.$lightgrayishBlue;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    .logo {
+        width: fu.toRem(60px);
+    }
+
+    .links {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-top: fu.toRem(45px);
+
+        .link {
+
+
+            &:not(:first-child) {
+                margin-top: fu.toRem(33px);
+            }
+        }
+    }
+
+    .socials {
+        padding-top: fu.toRem(48px);
+        padding-bottom: fu.toRem(37px);
+        width: fu.toRem(156px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
