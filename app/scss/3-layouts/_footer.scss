@@ -20,7 +20,6 @@ footer {
 
         .link {
 
-
             &:not(:first-child) {
                 margin-top: fu.toRem(33px);
             }
@@ -34,5 +33,43 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        svg {
+            display: block;
+            
+            path {
+                transition: fill var(--transition) ease-in-out;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                path {
+                    fill: c.$strongCyan;
+                }
+            }
+        }
+
+        .social {
+            position: relative;
+            // display: flex;
+            // justify-content: center;
+
+            .tooltip {
+                display: block;
+                position: absolute;
+                top: -100%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity var(--transition) ease-in-out;
+            }
+
+            &:hover {
+                .tooltip {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

@@ -14,6 +14,7 @@ button {
   width: 100%;
   border-radius: 20px;
   border: none;
+  transition: filter var(--transition) ease-in-out;
 }
 button:first-child {
   background-color: #26baa4;
@@ -23,6 +24,9 @@ button:last-child {
   margin-top: 1.375rem;
   background-color: #6173ff;
   box-shadow: 0px 0px 10px 0px rgba(97, 115, 255, 0.6);
+}
+button:hover {
+  filter: brightness(1.15);
 }
 
 body {
@@ -68,6 +72,18 @@ a {
   text-decoration: none;
 }
 
+.link:hover {
+  cursor: pointer;
+}
+.link:hover a {
+  color: #26baa4;
+}
+
+.tooltip {
+  font-size: 0.875rem;
+  color: #26baa4;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -83,6 +99,7 @@ html, body {
 
 :root {
   --mb-container-width: 84.5%;
+  --transition: 200ms;
 }
 
 body {
@@ -240,6 +257,33 @@ footer .socials {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+footer .socials svg {
+  display: block;
+}
+footer .socials svg path {
+  transition: fill var(--transition) ease-in-out;
+}
+footer .socials svg:hover {
+  cursor: pointer;
+}
+footer .socials svg:hover path {
+  fill: #26baa4;
+}
+footer .socials .social {
+  position: relative;
+}
+footer .socials .social .tooltip {
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity var(--transition) ease-in-out;
+}
+footer .socials .social:hover .tooltip {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

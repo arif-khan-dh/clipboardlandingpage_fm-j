@@ -43,3 +43,19 @@ button {
 a {
     text-decoration: none;
 }
+
+.link {
+
+    &:hover {
+        cursor: pointer;
+
+        a {
+            color: c.$strongCyan;
+        } 
+    }
+}
+
+.tooltip {
+    font-size: fo.$size-xxsm;
+    color: c.$strongCyan;
+}
