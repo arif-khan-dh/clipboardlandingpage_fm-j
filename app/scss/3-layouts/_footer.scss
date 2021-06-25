@@ -1,27 +1,87 @@
 @use '../1-abstrauct/functions' as fu;
 @use '../1-abstrauct/colors' as c;
+@use '../1-abstrauct/mixins' as m;
 
 footer {
-    margin-top: fu.toRem(161px);
-    padding-top: fu.toRem(48px);
+    --pad-top-bottom: #{fu.toRem(48px)};
+    margin-top: fu.toRem(142px);
+    padding-top: var(--pad-top-bottom);
     background-color: c.$lightgrayishBlue;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 
+    @include m.breakpoint-up(xmedium) {
+        flex-flow: row nowrap;
+        // padding-bottom: var(--pad-top-bottom);
+        padding: 5vw;
+    }
+
+    .logo-container {
+
+        @include m.breakpoint-up(xmedium) {
+            width: 16%;
+        }
+    }
+
     .logo {
         width: fu.toRem(60px);
+
+        @include m.breakpoint-up(xmedium) {
+            margin-right: auto;
+        }
     }
 
     .links {
+        width: 100%;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
         padding-top: fu.toRem(45px);
 
+        @include m.breakpoint-up(medium-small) { 
+            height: fu.toRem(120px);     
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-content: space-between;
+        }
+
+        @include m.breakpoint-up(medium) {
+            flex-wrap: nowrap;
+            height: auto;
+        }
+
+        @include m.breakpoint-up(xmedium) {
+            width: 55%;
+            padding-top: 0;
+            flex-flow: column wrap;
+            height: fu.toRem(52px);
+            align-items: start;
+            justify-content: space-between;
+            max-width: fu.toRem(492px);
+        }
+
+        @include m.breakpoint-up(xxlarge) {
+            height: fu.toRem(60px);
+        }
+
         .link {
+            width: max-content;
+
+            @include m.breakpoint-up(medium-small) {
+                width: 33%;
+            }
+
+            @include m.breakpoint-up(medium) {
+                width: auto;
+            }
 
             &:not(:first-child) {
                 margin-top: fu.toRem(33px);
+
+                @include m.breakpoint-up(medium-small) {
+                    margin-top: 0;
+                }
             }
         }
     }
@@ -34,8 +94,32 @@ footer {
         justify-content: space-between;
         align-items: center;
 
+        @include m.breakpoint-up(medium-small) {
+            padding-top: fu.toRem(60px);
+        }
+
+        @include m.breakpoint-up(medium) {
+            padding-top: fu.toRem(48px);
+        }
+
+        @include m.breakpoint-up(xmedium) {
+            padding: 0;
+            width: 12%;
+            margin-left: auto;
+        }
+
+        .social {
+
+            @include m.breakpoint-up(xmedium) {
+                width: 18%;
+                max-width: fu.toRem(24px);
+            }
+        }
+
         svg {
             display: block;
+            width: 100%;     
+
             
             path {
                 transition: fill var(--transition) ease-in-out;

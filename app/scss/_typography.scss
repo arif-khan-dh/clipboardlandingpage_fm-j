@@ -1,5 +1,6 @@
 @use './1-abstrauct/fonts' as fo;
 @use './1-abstrauct/colors' as c;
+@use './1-abstrauct/mixins' as m;
 
 body {
     font-family: fo.$font-baijamjuree;
@@ -22,14 +23,50 @@ p {
     color: c.$grayishBlue;
     font-size: fo.$size-xsm;
     line-height: 1.6em;
+
+    @include m.breakpoint-up(xxxlarge) {
+        font-size: fo.$size-sm;
+    }
 }
 
 h1 {
     font-size: fo.$size-xxlg;
+
+    @include m.breakpoint-up(small) {
+        font-size: fo.$size-xxxlg;
+    }
+
+    @include m.breakpoint-up(medium-xsmall) {
+        font-size: fo.$size-xxlg;
+    }
+
+    @include m.breakpoint-up(xmedium-small) {
+        font-size: fo.$size-xxxlg;
+    }
+
+    @include m.breakpoint-up(xmedium) {
+        font-size: fo.$size-xxxxlg;
+    }
+
+    @include m.breakpoint-up(xlarge) {
+        font-size: fo.$size-xxxxxlg;
+    }
+
+    @include m.breakpoint-up(xxlarge) {
+        font-size: fo.$size-xxxxxxlg;
+    }
 }
 
 h2 {
     font-size: fo.$size-xlg;
+
+    @include m.breakpoint-up(xmedium) {
+        font-size: fo.$size-xxlg;
+    }
+
+    @include m.breakpoint-up(xlarge) {
+        font-size: fo.$size-xxxlg;
+    }
 }
 
 h3 {
@@ -38,13 +75,99 @@ h3 {
 
 button {
     color: white;
+    font-size: fo.$size-xxsm;
 }
 
 a {
     text-decoration: none;
 }
 
+header .text {
+    p {
+        @include m.breakpoint-up(medium) {
+            font-size: fo.$size-sm;
+        }
+
+        @include m.breakpoint-up(x1large) {
+            font-size: fo.$size-md;
+        }
+
+        @include m.breakpoint-up(xxlarge) {
+            font-size: fo.$size-lg;
+        }
+    }
+}
+
+.benefits {
+
+    @include m.breakpoint-up(medium) {
+        text-align: left;
+    }
+
+    h3 {
+        @include m.breakpoint-up(medium) {
+            font-size: fo.$size-md;
+        }
+
+        @include m.breakpoint-up(large) {
+            font-size: fo.$size-lg;
+        }
+    }
+}
+
+.highlighted {
+
+    @include m.breakpoint-up(xxlarge) {
+        font-size: fo.$size-sm;
+    }
+}
+
+.features {
+
+    h3 {
+
+        @include m.breakpoint-up(xmedium) {
+            font-size: fo.$size-md;
+        }
+        
+        @include m.breakpoint-up(large) {
+            font-size: fo.$size-lg;
+        }
+
+        @include m.breakpoint-up(xlarge) {
+            font-size: fo.$size-xlg;
+        }
+    }
+
+    p {
+
+        @include m.breakpoint-up(xmedium) {
+            font-size: fo.$size-xxsm;
+        }
+
+        @include m.breakpoint-up(xlarge) {
+            font-size: fo.$size-xsm;
+        }
+
+        @include m.breakpoint-up(xxxlarge) {
+            font-size: fo.$size-sm;
+        }   
+    }
+}
+
 .link {
+
+    @include m.breakpoint-up(xmedium) {
+        font-size: fo.$size-xxsm;
+    }
+
+    @include m.breakpoint-up(xmedium) {
+        font-size: fo.$size-xsm;
+    }
+
+    @include m.breakpoint-up(xxlarge) {
+        font-size: fo.$size-sm;
+    }
 
     &:hover {
         cursor: pointer;

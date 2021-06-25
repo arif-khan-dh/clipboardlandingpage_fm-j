@@ -1,4 +1,5 @@
 @use '../1-abstrauct/functions' as fu;
+@use '../1-abstrauct/mixins' as m;
 
 .clients {
     padding-top: fu.toRem(123px);
@@ -6,12 +7,26 @@
     flex-flow: column nowrap;
     align-items: center;
 
+    @include m.breakpoint-up(medium) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding-top: 14%;
+    }
+
+    @include m.breakpoint-up(x1large) {
+        padding-top: fu.toRem(142px);
+    }
+
     .client {
         width: 45%;
         height: fu.toRem(45px);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+
+        @include m.breakpoint-up(medium) {
+            width: 14%;
+        }
 
         &:nth-child(1) {
             background-image: url(../../../images/logo-google.png);
@@ -36,6 +51,10 @@
 
         &:not(:first-child) {
             margin-top: fu.toRem(60px);
+
+            @include m.breakpoint-up(medium) {
+                margin-top: 0;
+            }
         }
     }
 }

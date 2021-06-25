@@ -1,5 +1,6 @@
 @use '../1-abstrauct/functions' as fu;
 @use '../1-abstrauct/colors' as c;
+@use  '../1-abstrauct/mixins' as m;
 
 button {
     cursor: pointer;
@@ -10,15 +11,20 @@ button {
     border: none;
     transition: filter var(--transition) ease-in-out;
 
-    &:first-child {
+    &.ios {
         background-color: c.$strongCyan;
         box-shadow: 0px 0px 10px 0px rgba($color: c.$strongCyan, $alpha: 0.6);
     }
 
-    &:last-child {
+    &.mac {
         margin-top: fu.toRem(22px);
         background-color: c.$lightBlue;
         box-shadow: 0px 0px 10px 0px rgba($color: c.$lightBlue, $alpha: 0.6);
+
+        @include m.breakpoint-up(medium) {
+            margin-top: 0;
+            margin-left: fu.toRem(20px);
+        }
     }
 
     &:hover {

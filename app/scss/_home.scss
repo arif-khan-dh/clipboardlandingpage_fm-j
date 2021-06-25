@@ -1,4 +1,5 @@
 @use './1-abstrauct/functions' as fu;
+@use './1-abstrauct/mixins' as m;
 
 @import url(https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap);
 
@@ -17,6 +18,7 @@ html, body {
 
 :root {
     --mb-container-width: 84.5%;
+    --tab-container-width: 96%;
     --transition: 200ms;
 }
 
@@ -31,14 +33,16 @@ body {
     background-image: url(../../images/bg-header-mobile.png);
     background-repeat: no-repeat;
     background-size: contain;
+
+    @include m.breakpoint-up(medium) {
+        background-image: url(../../images/bg-header-desktop.png);
+    }
 }
 
 .container {
     width: var(--mb-container-width);
     min-width: fu.toRem(318px);
-
-    // debug
-    // border: 1px solid black;
+    max-width: fu.toRem(1270px);
 }
 
 img {
@@ -50,7 +54,16 @@ img {
     margin-left: -900rem;
     margin-right: -900rem;
     padding-left: 900rem;
-    padding-right: 900rem;
-    // margin-left: calc(calc(calc(calc(100% - var(--mb-container-width)) / 2) * -1) + 8px);
-    // margin-left: calc(calc(calc(calc(100% - var(--mb-container-width)) / 2) * -1) + 0px);
+    padding-right: 900rem;    
+}
+
+.benefits, .features {    
+
+    @include m.breakpoint-up(small) {
+        margin: 0 auto;
+    }
+
+    @include m.breakpoint-up(medium) {
+        margin: 0;
+    }
 }

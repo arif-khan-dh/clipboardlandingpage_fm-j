@@ -16,17 +16,36 @@ button {
   border: none;
   transition: filter var(--transition) ease-in-out;
 }
-button:first-child {
+button.ios {
   background-color: #26baa4;
   box-shadow: 0px 0px 10px 0px rgba(38, 186, 164, 0.6);
 }
-button:last-child {
+button.mac {
   margin-top: 1.375rem;
   background-color: #6173ff;
   box-shadow: 0px 0px 10px 0px rgba(97, 115, 255, 0.6);
 }
+@media (min-width: 44.75rem) {
+  button.mac {
+    margin-top: 0;
+    margin-left: 1.25rem;
+  }
+}
 button:hover {
   filter: brightness(1.15);
+}
+
+.cta {
+  width: 100%;
+  max-width: 23.125rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media (min-width: 44.75rem) {
+  .cta {
+    flex-direction: row;
+    max-width: 31.25rem;
+  }
 }
 
 body {
@@ -51,13 +70,58 @@ p {
   font-size: 1rem;
   line-height: 1.6em;
 }
+@media (min-width: 106.25rem) {
+  p {
+    font-size: 1.125rem;
+  }
+}
 
 h1 {
   font-size: 2rem;
 }
+@media (min-width: 31.4375rem) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 37.75rem) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 42.3125rem) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 50.3125rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 70rem) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 94.75rem) {
+  h1 {
+    font-size: 3.25rem;
+  }
+}
 
 h2 {
   font-size: 1.75rem;
+}
+@media (min-width: 50.3125rem) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 70rem) {
+  h2 {
+    font-size: 2.25rem;
+  }
 }
 
 h3 {
@@ -66,12 +130,97 @@ h3 {
 
 button {
   color: white;
+  font-size: 0.875rem;
 }
 
 a {
   text-decoration: none;
 }
 
+@media (min-width: 44.75rem) {
+  header .text p {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 76.4375rem) {
+  header .text p {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 94.75rem) {
+  header .text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 44.75rem) {
+  .benefits {
+    text-align: left;
+  }
+}
+@media (min-width: 44.75rem) {
+  .benefits h3 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 62.875rem) {
+  .benefits h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 94.75rem) {
+  .highlighted {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 50.3125rem) {
+  .features h3 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 62.875rem) {
+  .features h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 70rem) {
+  .features h3 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 50.3125rem) {
+  .features p {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 70rem) {
+  .features p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 106.25rem) {
+  .features p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 50.3125rem) {
+  .link {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 50.3125rem) {
+  .link {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 94.75rem) {
+  .link {
+    font-size: 1.125rem;
+  }
+}
 .link:hover {
   cursor: pointer;
 }
@@ -99,6 +248,7 @@ html, body {
 
 :root {
   --mb-container-width: 84.5%;
+  --tab-container-width: 96%;
   --transition: 200ms;
 }
 
@@ -112,10 +262,16 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media (min-width: 44.75rem) {
+  body {
+    background-image: url(../../images/bg-header-desktop.png);
+  }
+}
 
 .container {
   width: var(--mb-container-width);
   min-width: 19.875rem;
+  max-width: 79.375rem;
 }
 
 img {
@@ -130,11 +286,34 @@ img {
   padding-right: 900rem;
 }
 
+@media (min-width: 31.4375rem) {
+  .benefits, .features {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 44.75rem) {
+  .benefits, .features {
+    margin: 0;
+  }
+}
+
 header {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding-top: 32%;
+  max-width: 25.9375rem;
+  margin: 0 auto;
+}
+@media (min-width: 31.4375rem) {
+  header {
+    padding-top: 8.125rem;
+  }
+}
+@media (min-width: 37.75rem) {
+  header {
+    max-width: 100%;
+  }
 }
 header .text {
   padding-top: 4.1875rem;
@@ -143,11 +322,23 @@ header .text p {
   --p-padding-top: 1.375rem;
   padding-top: var(--p-padding-top);
   padding-bottom: calc(2 * var(--p-padding-top));
+  max-width: 33rem;
+  margin: 0 auto;
 }
-header .cta {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
+@media (min-width: 44.75rem) {
+  header .text p {
+    max-width: 36.875rem;
+  }
+}
+@media (min-width: 50.3125rem) {
+  header .text p {
+    max-width: 41.625rem;
+  }
+}
+@media (min-width: 94.75rem) {
+  header .text p {
+    max-width: 47.875rem;
+  }
 }
 
 .what-you-can-do p {
@@ -156,30 +347,115 @@ header .cta {
 .what-you-can-do .benefit {
   padding-top: 3.5rem;
 }
-.what-you-can-do .illustration {
-  padding-top: 3.75rem;
+.what-you-can-do .highlighted {
+  max-width: 39.875rem;
+  margin: 0 auto;
 }
 
 .primary {
   padding-top: 8.25rem;
 }
+.primary .hero {
+  --max-width: 95rem;
+  padding-top: 3.75rem;
+  max-width: var(--max-width);
+}
+@media (min-width: 44.75rem) {
+  .primary .hero {
+    --d-vw: calc(100vw - 17px);
+    --margin-left: calc(calc(calc(var(--d-vw) / 2) - 50%) * -1);
+    width: var(--d);
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-left);
+    display: flex;
+    align-items: stretch;
+  }
+}
+@media (min-width: 94.75rem) {
+  .primary .hero {
+    margin-left: calc(var(--margin-left) + calc(calc(100vw - var(--max-width)) / 2));
+    margin-right: calc(var(--margin-left) + calc(calc(100vw - var(--max-width)) / 2));
+  }
+}
+@media (min-width: 44.75rem) {
+  .primary .hero .illustration {
+    width: 50%;
+  }
+}
+@media (min-width: 44.75rem) {
+  .primary .hero .illustration img {
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+  }
+}
+.primary .hero .benefits {
+  max-width: 26.25rem;
+}
+@media (min-width: 44.75rem) {
+  .primary .hero .benefits {
+    padding-left: 7%;
+    padding-right: 1rem;
+    width: 50%;
+  }
+}
+@media (min-width: 62.875rem) {
+  .primary .hero .benefits {
+    padding-right: 0;
+    max-width: calc(5% + 420px);
+  }
+}
 
 .secondary {
-  padding-top: 11.125rem;
+  padding-top: 9rem;
+}
+.secondary .illustration {
+  padding-top: 3.75rem;
+  max-width: 50rem;
+  margin: 0 auto;
 }
 .secondary div:last-child {
-  padding-top: 5.125rem;
+  padding-top: 3.125rem;
 }
 
 .features {
   padding-top: 5.125rem;
+  max-width: 26.25rem;
+  margin: 0 auto;
+}
+@media (min-width: 50.3125rem) {
+  .features {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+}
+.features .feature {
+  display: flex;
+  flex-flow: column nowrap;
+}
+@media (min-width: 50.3125rem) {
+  .features .feature {
+    width: 30%;
+    max-width: 17.875rem;
+  }
 }
 .features .feature:not(:first-child) {
   padding-top: 3.5rem;
 }
+@media (min-width: 50.3125rem) {
+  .features .feature:not(:first-child) {
+    padding-top: 0;
+  }
+}
 .features .feature .icon {
   width: 2.875rem;
   margin: 0 auto;
+  height: max(15%, 2.5625rem);
+}
+.features .feature .text {
+  height: 85%;
 }
 .features .feature h3 {
   padding-top: 2.5625rem;
@@ -194,12 +470,29 @@ header .cta {
   flex-flow: column nowrap;
   align-items: center;
 }
+@media (min-width: 44.75rem) {
+  .clients {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 14%;
+  }
+}
+@media (min-width: 76.4375rem) {
+  .clients {
+    padding-top: 8.875rem;
+  }
+}
 .clients .client {
   width: 45%;
   height: 2.8125rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+@media (min-width: 44.75rem) {
+  .clients .client {
+    width: 14%;
+  }
 }
 .clients .client:nth-child(1) {
   background-image: url(../../../images/logo-google.png);
@@ -220,35 +513,121 @@ header .cta {
 .clients .client:not(:first-child) {
   margin-top: 3.75rem;
 }
+@media (min-width: 44.75rem) {
+  .clients .client:not(:first-child) {
+    margin-top: 0;
+  }
+}
 
 .download {
-  padding-top: 10rem;
+  padding-top: 9.375rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+@media (min-width: 44.75rem) {
+  .download {
+    padding-top: 20%;
+  }
+}
+@media (min-width: 62.875rem) {
+  .download {
+    padding-top: 8.875rem;
+  }
 }
 .download .text p {
   padding-top: 1.375rem;
+  max-width: 40.375rem;
 }
 .download .cta {
   padding-top: 2.8125rem;
 }
 
 footer {
-  margin-top: 10.0625rem;
-  padding-top: 3rem;
+  --pad-top-bottom: 3rem;
+  margin-top: 8.875rem;
+  padding-top: var(--pad-top-bottom);
   background-color: #f6f7f9;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
+@media (min-width: 50.3125rem) {
+  footer {
+    flex-flow: row nowrap;
+    padding: 5vw;
+  }
+}
+@media (min-width: 50.3125rem) {
+  footer .logo-container {
+    width: 16%;
+  }
+}
 footer .logo {
   width: 3.75rem;
 }
+@media (min-width: 50.3125rem) {
+  footer .logo {
+    margin-right: auto;
+  }
+}
 footer .links {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   padding-top: 2.8125rem;
+}
+@media (min-width: 39.125rem) {
+  footer .links {
+    height: 7.5rem;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+  }
+}
+@media (min-width: 44.75rem) {
+  footer .links {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+}
+@media (min-width: 50.3125rem) {
+  footer .links {
+    width: 55%;
+    padding-top: 0;
+    flex-flow: column wrap;
+    height: 3.25rem;
+    align-items: start;
+    justify-content: space-between;
+    max-width: 30.75rem;
+  }
+}
+@media (min-width: 94.75rem) {
+  footer .links {
+    height: 3.75rem;
+  }
+}
+footer .links .link {
+  width: max-content;
+}
+@media (min-width: 39.125rem) {
+  footer .links .link {
+    width: 33%;
+  }
+}
+@media (min-width: 44.75rem) {
+  footer .links .link {
+    width: auto;
+  }
 }
 footer .links .link:not(:first-child) {
   margin-top: 2.0625rem;
+}
+@media (min-width: 39.125rem) {
+  footer .links .link:not(:first-child) {
+    margin-top: 0;
+  }
 }
 footer .socials {
   padding-top: 3rem;
@@ -258,8 +637,32 @@ footer .socials {
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 39.125rem) {
+  footer .socials {
+    padding-top: 3.75rem;
+  }
+}
+@media (min-width: 44.75rem) {
+  footer .socials {
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 50.3125rem) {
+  footer .socials {
+    padding: 0;
+    width: 12%;
+    margin-left: auto;
+  }
+}
+@media (min-width: 50.3125rem) {
+  footer .socials .social {
+    width: 18%;
+    max-width: 1.5rem;
+  }
+}
 footer .socials svg {
   display: block;
+  width: 100%;
 }
 footer .socials svg path {
   transition: fill var(--transition) ease-in-out;

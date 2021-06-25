@@ -3,23 +3,18 @@
 
 // Width of vertical scrollbar is 17px
 $breakpoint-up: (
-    "xxxxxxxxlarge": fu.toRem(1440px), // 8x
-    "xxxxxxxlarge": fu.toRem(1296px), // 7x
-    "xxxxxxlarge": fu.toRem(1182px),
-    "xxxxxlarge": fu.toRem(1053px), // 5x
-    "xxxxlarge": fu.toRem(988px),
-    "xxxlarge": fu.toRem(923px),
-    "xx1large": fu.toRem(868px),
-    "xxlarge": fu.toRem(793px),
-    "xlarge": fu.toRem(760px),
-    "large": fu.toRem(737px),
-    "xxmedium": fu.toRem(653px), 
-    "xmedium": fu.toRem(623px), 
-    "medium": fu.toRem(607px),
-    "medium-small": fu.toRem(551px),
-    "medium-xsmall": fu.toRem(543px),
-    "small": fu.toRem(516px),
-    "xsmall": fu.toRem(375px),
+    "xxxlarge": fu.toRem(1700px),
+    "xxlarge": fu.toRem(1516px),
+    "x1large": fu.toRem(1223px),
+    "xlarge": fu.toRem(1120px),
+    "large": fu.toRem(1006px),
+    "xmedium": fu.toRem(805px),
+    "medium": fu.toRem(716px),
+    "xmedium-small": fu.toRem(677px),
+    "medium-small": fu.toRem(626px),
+    "medium-xsmall": fu.toRem(604px),
+    "small": fu.toRem(503px),
+    "xsmall": fu.toRem(0px),
     
 );
 

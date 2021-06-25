@@ -1,4 +1,5 @@
 @use '../1-abstrauct/functions' as fu;
+@use '../1-abstrauct/mixins' as m;
 
 .what-you-can-do {
 
@@ -10,19 +11,79 @@
         padding-top: fu.toRem(56px);
     }
 
-    .illustration {
-        padding-top: fu.toRem(60px);
+    .highlighted {
+        max-width: fu.toRem(638px);
+        margin: 0 auto;
     }
 }
 
 .primary {
     padding-top: fu.toRem(132px);
+
+    .hero {
+        --max-width: #{fu.toRem(1520px)};
+        // --max-width: #{fu.toRem(1517px)};
+        padding-top: fu.toRem(60px);
+        max-width: var(--max-width);
+        
+        @include m.breakpoint-up(medium) {
+            --d-vw: calc(100vw - 17px);            
+            --margin-left: calc(calc(calc(var(--d-vw) / 2) - 50%) * -1);
+            width: var(--d);
+            margin-left: var(--margin-left);
+            margin-right: var(--margin-left);
+
+            display: flex;
+            align-items: stretch; 
+        }
+
+        @include m.breakpoint-up(xxlarge) {            
+            margin-left: calc(var(--margin-left) + calc(calc(100vw - var(--max-width)) / 2));
+            margin-right: calc(var(--margin-left) + calc(calc(100vw - var(--max-width)) / 2));
+        }
+
+        .illustration {
+
+            @include m.breakpoint-up(medium) {
+                width: 50%;
+            }
+
+            img {
+                @include m.breakpoint-up(medium) {
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: right;      
+                }
+            }
+        }
+
+        .benefits {
+            max-width: fu.toRem(420px);
+
+            @include m.breakpoint-up(medium) {
+                padding-left: 7%;
+                padding-right: fu.toRem(16px);
+                width: 50%;
+            }
+
+            @include m.breakpoint-up(large) {
+                padding-right: 0;
+                max-width: calc(5% + 420px);
+            }
+        }
+    }
 }
 
 .secondary {
-    padding-top: fu.toRem(178px);
+    padding-top: fu.toRem(144px);
+
+    .illustration {
+        padding-top: fu.toRem(60px);
+        max-width: fu.toRem(800px);
+        margin: 0 auto;
+    }
 
     div:last-child {
-        padding-top: fu.toRem(82px);
+        padding-top: fu.toRem(50px);
     }
 }

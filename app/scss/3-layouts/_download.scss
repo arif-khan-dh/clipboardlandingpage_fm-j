@@ -1,12 +1,25 @@
 @use '../1-abstrauct/functions' as fu;
+@use '../1-abstrauct/mixins' as m;
 
-.download {
-    padding-top: fu.toRem(160px);
+.download {    
+    padding-top: fu.toRem(150px);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    @include m.breakpoint-up(medium) {
+        padding-top: 20%;
+    }
+
+    @include m.breakpoint-up(large) {
+        padding-top: fu.toRem(142px);
+    }
 
     .text {
 
         p {
             padding-top: fu.toRem(22px);
+            max-width: fu.toRem(646px);
         }
     }
 

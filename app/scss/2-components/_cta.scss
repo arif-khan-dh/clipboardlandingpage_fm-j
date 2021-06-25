@@ -1,0 +1,15 @@
+@use '../1-abstrauct/functions' as fu;
+@use '../1-abstrauct/mixins' as m;
+// @use './button';
+
+.cta {
+    width: 100%;
+    max-width: fu.toRem(370px);
+    display: flex;
+    flex-flow:column nowrap;
+
+    @include m.breakpoint-up(medium) {
+        flex-direction: row;
+        max-width: fu.toRem(500px); // arbitrary value
+    }
+}

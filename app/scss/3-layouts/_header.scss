@@ -1,11 +1,23 @@
 @use '../1-abstrauct/functions' as fu;
+@use  '../1-abstrauct/mixins' as m;
 
 header {
     // height: fu.toRem(672px);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding-top: 32%;    
+    padding-top: 32%;
+
+    max-width: fu.toRem(415px);
+    margin: 0 auto;
+
+    @include m.breakpoint-up(small) {
+        padding-top: fu.toRem(130px);
+    }
+
+    @include m.breakpoint-up(medium-xsmall) {
+        max-width: 100%;
+    }
 
     .text {
         padding-top: fu.toRem(67px);
@@ -14,12 +26,20 @@ header {
             --p-padding-top: #{fu.toRem(22px)};
             padding-top: var(--p-padding-top);
             padding-bottom: calc(2 * var(--p-padding-top));
-        }
-    }
+            max-width: fu.toRem(528px);
+            margin: 0 auto;
 
-    .cta {
-        width: 100%;
-        display: flex;
-        flex-flow:column nowrap;
+            @include m.breakpoint-up(medium) {
+                max-width: fu.toRem(590px);                
+            }
+
+            @include m.breakpoint-up(xmedium) {
+                max-width: fu.toRem(666px);
+            }
+
+            @include m.breakpoint-up(xxlarge) {
+                max-width: fu.toRem(766px);
+            }
+        }
     }
 }

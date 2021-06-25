@@ -1,17 +1,43 @@
 @use '../1-abstrauct/functions' as fu;
+@use '../1-abstrauct/mixins' as m;
 
 .features {
     padding-top: fu.toRem(82px);
+    max-width: fu.toRem(420px);
+    margin: 0 auto;
+
+    @include m.breakpoint-up(xmedium) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        max-width: 100%; // arbitrary value
+    }
 
     .feature {
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include m.breakpoint-up(xmedium) {
+            width: 30%;
+            max-width: fu.toRem(286px);
+        }
 
         &:not(:first-child) {
             padding-top: fu.toRem(56px);
+
+            @include m.breakpoint-up(xmedium) {
+                padding-top: 0;
+            }
         }
 
         .icon {
             width: fu.toRem(46px);
             margin: 0 auto;
+            height: max(15%, #{fu.toRem(41px)});
+        }
+
+        .text {
+            height: 85%;
         }
 
         h3 {

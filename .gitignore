@@ -16,7 +16,12 @@
 .vscode
 .git
 debug-img.html
+debug-img-auto.html
 debug-nthchild.html
 debug-wrapper.html
 debug-wrapper1.html
 debug-full-width.html
+debug-media-query.html
+debug-media-query.scss
+debug-media-query.css
+debug-media-query.css.map
