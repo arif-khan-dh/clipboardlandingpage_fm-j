@@ -149,7 +149,7 @@ header .text {
             font-size: fo.$size-xsm;
         }
 
-        @include m.breakpoint-up(xxxlarge) {
+        @include m.breakpoint-up(x1large) {
             font-size: fo.$size-sm;
         }   
     }
