@@ -441,6 +441,11 @@ header .text p {
     max-width: 17.875rem;
   }
 }
+@media (min-width: 62.875rem) {
+  .features .feature {
+    max-width: 23.875rem;
+  }
+}
 .features .feature:not(:first-child) {
   padding-top: 3.5rem;
 }

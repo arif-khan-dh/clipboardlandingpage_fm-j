@@ -22,6 +22,10 @@
             max-width: fu.toRem(286px);
         }
 
+        @include m.breakpoint-up(large) {
+            max-width: fu.toRem(382px);
+        }
+
         &:not(:first-child) {
             padding-top: fu.toRem(56px);
 
